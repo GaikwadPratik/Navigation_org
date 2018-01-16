@@ -1,0 +1,99 @@
+﻿<div id="pending_info">
+    <table class="table table-striped persondetails" style="margin-left:auto;margin-right:auto;text-align:left;">
+        <tbody>
+            <tr>
+                <td>
+                    First Name:
+                </td>
+                <td>
+                    {{PersonalDetails.FirstName}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name:
+                </td>
+                <td>
+                    {{PersonalDetails.LastName}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email Address:
+                </td>
+                <td>
+                    {{PersonalDetails.Email}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    User Type:
+                </td>
+                <td>
+                    {{PersonalDetails.SercRoleName}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Industry Name:
+                </td>
+                <td>
+                    {{#if PersonalDetails.ProcessedUser}}
+                        {{PersonalDetails.EntityName}}
+                    {{else}}
+                        <input type="text" id="txtEntityName" class="form-control text" name="EntityName" value="{{PersonalDetails.EntityName}}" />
+                    {{/if}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Industry Affiliation:
+                </td>
+                <td>
+                    {{#if PersonalDetails.ProcessedUser}}
+                        {{PersonalDetails.CategoryName}}
+                    {{else}}
+                        <select id="industryAffl" class="form-control" name="industryAffl">
+                            {{generateOption BussinessCatgories "CategoryId" "CategoryName" PersonalDetails.CategoryId}}
+                        </select>
+                    {{/if}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Requested Date:
+                </td>
+                <td>
+                    {{PersonalDetails.RequestedDate}}
+                </td>
+            </tr>
+            {{#if PersonalDetails.ProcessedDate}}
+            <tr>
+                <td>
+                    Processed Date:
+                </td>
+                <td>
+                    {{PersonalDetails.ProcessedDate}}
+                </td>
+            </tr>
+            {{/if}}
+            {{#if PersonalDetails.Comments}}
+            <tr>
+                <td>
+                    Comments:
+                </td>
+                <td>
+                    {{PersonalDetails.Comments}}
+                </td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+    <div class="from-group hidden" id="commentDiv">
+        <label for="comment" class="commentForDenyLbl" id="lblCommentForDeny">Reason:</label>
+        <textarea class="commentSection" id="txtComments"></textarea>
+        <button type="button" id="btnCloseIcon" class="close" aria-label="Close">
+            <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>

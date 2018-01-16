@@ -1,0 +1,69 @@
+﻿<div id="divEducations{{Id}}" class="container">
+    <div class="row">
+        <div class="panel panel-default registerPanel">
+            <div class="panel-body form-group firstGroup">
+                <div id="divEducation{{Id}}" name="divEducation{{Id}}" class="panel panel-default" data-child-div>
+                    <div class="hide">
+                        <label id="lblEducationType{{Id}}" name="lblEducationType{{Id}}" for="txtEducationType{{Id}}" class="hide"></label>
+                        {{#ifCond DegreeType '===' "HighSchool"}}
+                        <input type="text" id="txtEducationType{{Id}}" name="txtEducationType{{Id}}" value="HighSchool" class="hide" />
+                        {{else}}
+                        <input type="text" id="txtEducationType{{Id}}" name="txtEducationType{{Id}}" value="College" class="hide" />
+                        {{/ifCond}}
+                        <label id="lblEducationID{{Id}}" name="lblEducationID{{Id}}" for="txtEducationID{{Id}}" class="hide"></label>
+                        <input type="text" id="txtEducationID{{Id}}" name="txtEducationID{{Id}}" value="{{EducationHistoryId}}" class="hide" />
+                    </div>
+                    <br />
+                    {{#ifCond DegreeType '===' "HighSchool"}}
+                    <div class="form-group row">
+                        <label class="col-md-6 control-label" id="lblEducationInstitutionName{{Id}}" name="lblEducationInstitutionName{{Id}}" for="txtEducationInstitutionName{{Id}}">HighScool Name</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <input id="txtEducationInstitutionName{{Id}}" name="txtEducationInstitutionName{{Id}}" value="{{SchoolName}}" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label" id="lblEducationGradYear{{Id}}" name="lblEducationGradYear{{Id}}" for="txtEducationDegreeYear{{Id}}">High School Graduation Year</label>
+                        <div class='col-md-6'>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input class="text-input form-control" type="text" name="txtEducationDegreeYear{{Id}}" id="txtEducationDegreeYear{{Id}}" maxlength="10" value="{{DegreeYear}}" />
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{else}}
+                    <div class="form-group row">
+                        <label class="col-md-6 control-label" id="lblEducationDegreeName{{Id}}" name="lblEducationDegreeName{{Id}}" for="txtEducationDegreeName{{Id}}">Degree Name</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <input name="txtEducationDegreeName{{Id}}" id="txtEducationDegreeName{{Id}}" value="{{DegreeName}}" class="form-control requireValidate" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-6 control-label" id="lblEducationInstitutionName{{Id}}" name="lblEducationInstitutionName{{Id}}" for="txtEducationInstitutionName{{Id}}">College Name</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <input id="txtEducationInstitutionName{{Id}}" name="txtEducationInstitutionName{{Id}}" value="{{SchoolName}}" placeholder="" class="requireValidate form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-6 control-label" id="lblEducationGradYear{{Id}}" name="lblEducationGradYear{{Id}}" for="txtEducationDegreeYear{{Id}}">College Graduation Year</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <input class="text-input form-control requireValidate" type="text" name="txtEducationDegreeYear{{Id}}" id="txtEducationDegreeYear{{Id}}" maxlength="10" value="{{DegreeYear}}">
+                        </div>
+                    </div>
+                    {{/ifCond}}
+                    <div class="form-group row">
+                        <div class="margin776">
+                            <button type="button" class="btn btn-default btn-add" id="btnAddEducation{{Id}}" data-click-Function="EducationProfile.LoadEducationDiv({{DegreeType}});">
+                                <span class="glyphicon  glyphicon-plus color999" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-default btn-remove" id="btnRemoveHighschool{{Id}}" data-click-Function="EducationProfile.RemoveEducationDiv({{Id}});">
+                                <span class="glyphicon glyphicon-minus color999" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

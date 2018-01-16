@@ -1,0 +1,73 @@
+﻿<div id="divResearchTasks{{Id}}" class="container">
+    <div class="row">
+        <div class="panel panel-default registerPanel">
+            <div class="panel-body form-group">
+                <div id="divResearchTask{{Id}}" name="divResearchTask{{Id}}" class="panel panel-default" data-child-div>
+                    <div class="hide">
+                        <label id="lblResearchTaskId{{Id}}" name="lblResearchTaskId{{Id}}" for="txtResearchTaskId{{Id}}" class="hide"></label>
+                        <input type="text" id="txtResearchTaskId{{Id}}" name="txtResearchTaskId{{Id}}" value="{{ResearchTaskId}}" class="hide" />
+                    </div>
+                    <div class="form-group row firstGroup">
+                        <label id="lblResearchCategory{{Id}}" name="lblResearchCategory{{Id}}" for="ddnResearchCategory{{Id}}" class="col-md-6 col-form-label">Reaserch Category</label>
+                        <div class="col-md-6 selectContainer">
+                            <select class="form-control selectpicker" id="ddnResearchCategory{{Id}}" name="ddnResearchCategory{{Id}}">
+                                {{generateOption ResearchCategories "ResearchcategoryId" "ResearchCategoryName" ResearchCategoryId}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label id="lblReseachProgram{{Id}}" name="lblReseachProgram{{Id}}" for="ddnReseachProgram{{Id}}" class="col-md-6 control-label"> Research Program</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <select id="ddnReseachProgram{{Id}}" name="ddnReseachProgram{{Id}}" class="form-control selectpicker" disabled></select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label id="lblReseachProject{{Id}}" name="lblReseachProject{{Id}}" for="ddnReseachProject{{Id}}" class="col-md-6 control-label"> Research Project</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <select id="ddnReseachProject{{Id}}" name="ddnReseachProject{{Id}}" class="form-control selectpicker" disabled></select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label id="lblReseachTaskName{{Id}}" name="lblReseachTaskName{{Id}}" for="txtReseachTaskName{{Id}}" class="col-md-6 control-label" disabled> Research Task</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <input type="text" id="txtReseachTaskName{{Id}}" name="txtReseachTaskName{{Id}}" class="form-control selectpicker" value={{ResearchTaskNumber}} />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label id="lblUniversityAffiliation{{Id}}" name="lblUniversityAffiliation{{Id}}" for="ddnUniversityAffiliation{{Id}}" class="col-md-6 control-label">University Affiliation</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <select id="ddnUniversityAffiliation{{Id}}" name="ddnUniversityAffiliation{{Id}}" class="form-control selectpicker">
+                                {{generateOption UniversityAffiliations "EntityId" "EntityName" EntityId}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label id="lblResearchTaskInterest{{Id}}" name="lblResearchTaskInterest{{Id}}" for="txtResearchTaskInterest{{Id}}" class="col-md-6 control-label">Research Interest Keywords</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <textarea id="txtResearchTaskInterest{{Id}}" name="txtResearchTaskInterest{{Id}}" placeholder="" class="form-control" type="text"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label id="lblUserTaskRole{{Id}}" name="lblUserTaskRole{{Id}}" for="ddnUserTaskRole{{Id}}" class="col-md-6 col-form-label">Role</label>
+                        <div class="col-md-6 selectContainer">
+                            <select class="form-control selectpicker" id="ddnUserTaskRole{{Id}}" name="ddnUserTaskRole{{Id}}">
+                                {{generateOption ResearchRoles "ResearchRoleId" "ResearchRoleName" ResearchRoleId}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="addRemoveButtonDiv">
+                            <button type="button" class="btn btn-default btn-add" id="btnAddTaskDetails{{Id}}" data-click-Function="ResearchProfile.LoadTaskDiv();">
+                                <span class="glyphicon  glyphicon-plus color999" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-default btn-remove" id="btnRemoveTaskDetails{{Id}}" data-click-Function="ResearchProfile.RemoveTaskDiv({{Id}});">
+                                <span class="glyphicon glyphicon-minus color999" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

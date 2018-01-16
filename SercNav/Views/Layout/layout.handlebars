@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>{{Title}}</title>
+    <link href="/Stylesheets/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <link href="/Stylesheets/Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="/Stylesheets/Application/custom.css" rel="stylesheet" />
+    <link href="/ExternalStyleSheet/bootstrap-dialog/bootstrap-dialog.css" rel="stylesheet" />
+
+</head>
+<body>
+    <script src="/scripts/external/jquery-core/jquery.js"></script>
+    <script src="/scripts/external/jquery-ui/jquery-ui.js"></script>
+    <script src="/scripts/external/Bootstrap/bootstrap.js"></script>
+    <script src="/scripts/external/jquery-core/jquery.validate.min.js"></script>
+    <script src="/scripts/external/jquery-core/additional-methods.min.js"></script>
+    <script src="/scripts/external/Handlebars/handlebars-v4.0.5.js"></script>
+    <script src="/scripts/Utility/Utility.js"></script>
+    <script src="/scripts/external/jquery-core/jquery.tablesorter.min.js"></script>
+
+
+    <div class="headerWrapper">
+        <div class="container">
+            <div class="loginButtonSet pull-right">
+                {{#unless isAuthenticated}}
+                <div class="loginBtn">
+                    <span class="loginKey"></span>
+                    <a href="/Login/" class="loginLink">Login</a>
+                </div>
+                <a href="/Register/" class="registerBtn"> Register</a>
+                {{else}}
+                <div class="loginBtn">
+                    <a href="/Logout/" class="logoutLink">Logout</a>
+                </div>
+                {{/unless}}
+            </div>
+            <div class="logoHeader">
+                <div class="logo pull-left">
+                    <a href="/" title="Home Page">
+                        <img src="../../Images/applicationImages/SERC_Logo_stacked_1.jpg" alt="SERC Logo" />
+                    </a>
+                </div>
+                <div class="heading pull-right">
+                    <h3>SERC Network Analysis & Visualization [NAV] </h3>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    {{#if ErrorMessages}}
+        {{#each ErrorMessages}}
+            <div id="divErrorMessages" class="alert alert-danger">{{this}}</div>
+        {{/each}}
+    {{/if}}
+
+    <nav class="navbar navbar-default customNav">
+        <div class="container">
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Home tab -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HOME</a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="#">INTRODUCTION</a></li>
+                            <li><a href="#">ABOUT SERC NAV</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Visualization Perspective -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VISUALIAZATION PERSPECTIVE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">UNIVERSITY PI-PERSEPCTIVE</a></li>
+                            <li><a href="#">THRUST-CATEGORY PERSPECTIVE</a></li>
+
+
+                        </ul>
+                    </li>
+
+                    <!-- View Types -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIEW TYPES</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">NETWORK GRAPH VIEW</a></li>
+                            <li><a href="#">VERTICAL VIEW VIEW</a></li>
+                            <li><a href="#">HIERARCHICAL VIEW VIEW</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Serc Data-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERC DATA</a>
+
+                    </li>
+
+
+                    <!-- Virtual Tours -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIRTUAL TOURS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">CCSE LAB TOUR</a></li>
+                            <li><a href="#">BABBIO SSE TOUR</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Help-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HELP</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">ABOUT</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {{{body}}}
+
+    <div style="text-align:center;">
+        <i class="glyphicon glyphicon-copyright-mark"></i>
+        <label id="lblFooterYearLabel"></label>
+        Systems Engineering Research Center <br />
+        All rights reserved
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            let _year = new Date().getFullYear();
+            $('#lblFooterYearLabel').html(`2016 - ${_year}`);
+        });
+    </script>
+</body>
+</html>

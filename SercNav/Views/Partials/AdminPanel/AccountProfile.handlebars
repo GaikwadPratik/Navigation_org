@@ -1,0 +1,62 @@
+﻿<link href="/Stylesheets/Application/admin.css" rel="stylesheet" />
+<div class="row">
+    <div class="col-md-6 scrollClass">
+        <h4 class="tblHeading"> Profile Request to be Processed </h4>    
+        <table class="table table-striped width17 tablesorter" id="toBeProcessed">
+            <thead>
+                <tr>
+                    <th>Account Name</th>
+                    <th>Date of request</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each LstToProcess}}
+                <tr>
+                    <td>
+                        {{AccountName}}
+                    </td>
+                    <td>
+                        {{RequestedDate}}
+                    </td>
+                    <td>
+                        <input type="button" class="btn btn-primary" value="View Details" onclick="adminPanel.GetUserProfileDetails({{PersonId}},false);" />
+
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6 scrollClass">
+        <h4 class="tblHeading" > Processed Profile Request </h4>
+        <table class="table table-striped tablesorter" id="processedTable">
+            <thead>
+                <tr>
+                    <th>Account Name</th>
+                    <th>Date Requested</th>
+                    <th>Date Processed</th>
+                    <th></th>
+            </thead>
+            <tbody>
+                {{#each LstProcessed}}
+                <tr>
+                    <td>
+                        {{AccountName}}
+                    </td>
+                    <td>
+                        {{RequestedDate}}
+                    </td>
+                    <td>
+                        {{ProcessedDate}}
+                    </td>                    
+                    <td>
+                        <input type="button" class="btn btn-primary" value="View Details" onclick="adminPanel.GetUserProfileDetails({{PersonId}},true);" />
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>   
+</div>
+

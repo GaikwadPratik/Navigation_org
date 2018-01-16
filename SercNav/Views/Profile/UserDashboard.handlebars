@@ -1,0 +1,19 @@
+﻿
+<div class="container">
+
+    <div class="well">
+        <h3>
+            Welcome User
+            <span>{{UserDetails.FirstName}} </span>
+            <span>{{UserDetails.LastName}} </span>
+        </h3>
+        <p> Please complete your profile. </p>
+        <button type="button" class="btn btn-lg btn-primary" id="createProfile">Compelete Profile </button>
+        <input type="hidden" id="IsProfileApproved" value={{UserDetails.IsProfileComplete}}>      
+        <input type="hidden" id="profileProcessDt" value={{UserDetails.profileProcessDt}}>
+    </div>
+</div>
+
+<link rel="stylesheet" href="/ExternalStyleSheet/bootstrap-dialog/bootstrap-dialog.css" />
+<script type="text/javascript" src="/scripts/Profile/CreateProfile.js"></script>
+<script type="text/javascript" src="/ExternalJavascript/bootstrap-dialog/bootstrap-dialog.js"></script>

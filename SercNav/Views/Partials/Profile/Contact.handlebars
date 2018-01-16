@@ -1,0 +1,39 @@
+﻿<div id="divContacts{{Id}}" class="container">
+    <div class="row">
+        <div class="panel panel-default registerPanel">
+            <div class="panel-body form-group">
+                <div class="panel panel-default" id="divContact{{Id}}" name="divContact{{Id}}" data-child-div>
+                    <div class="hide">
+                        <label id="lblContactId{{Id}}" name="lblContactId{{Id}}" for="txtContactId{{Id}}" class="hide"></label>
+                        <input type="text" id="txtContactId{{Id}}" name="txtContactId{{Id}}" value="{{ContactId}}" class="hide" />
+                    </div>
+                    <div class="form-group row firstGroup">
+                        <label class="col-md-6 control-label" id="lblContactType{{Id}}" name="lblContactType{{Id}}" for="ddnContactType{{Id}}">Contact Type</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <select class="form-control selectpicker ddRequire" id="ddnContactType{{Id}}" name="ddnContactType{{Id}}">
+                                {{generateOption ContactTypes "ContactTypeId" "ContactTypeName" ContactTypeId}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label" id="lblContactValue{{Id}}" name="lblContactValue{{Id}}" for="txtContactValue{{Id}}">Contact</label>
+                        <div class="col-md-6 selectContainer">
+                            <input type="text" class="form-control requireValidate" id="txtContactValue{{Id}}" name="txtContactValue{{Id}}" value="{{ContactValue}}" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <!--<label class="col-md-6 control-label"></label>-->
+                        <div class="margin776">
+                            <button type="button" class="btn btn-default btn-add" id="btnAddContact{{Id}}" data-click-Function="ContactProfile.LoadContactDiv();">
+                                <span class="glyphicon  glyphicon-plus color999" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-default btn-remove" data-click-Function="ContactProfile.RemoveAddressDiv({{Id}});">
+                                <span class="glyphicon glyphicon-minus color999" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

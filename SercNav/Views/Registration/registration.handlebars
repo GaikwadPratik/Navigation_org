@@ -1,0 +1,81 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="alert alert-success hide" role="alert" id="registerMsg"> <strong>Well done!</strong>You are done with Regitration process, please check your mail for further details.</div>
+        <div class="panel panel-default registerPanel">
+            <div class="panel-body">
+                <form role="form" id="registrationForm">
+                    <div class="form-group">
+                        <h2>Create account</h2>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="caption">Salutation</label>
+                        <select id="caption" class="form-control" name="caption">
+                            <option value="none">Select One</option>
+                            <option>Miss</option>
+                            <option>Mrs.</option>
+                            <option>Mr.</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="txtFirstName">First Name</label>
+                        <input type="text" name="firstName" placeholder="Enter First Name Here.." class="form-control" id="txtFirstName">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="txtLastName">Last Name</label>
+                        <input type="text" name="lastName" placeholder="Enter Last Name Here.." class="form-control" id="txtLastName">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="txtUsername">Username</label>
+                        <input id="txtUsername" name="userrname" type="text" minlength="6" maxlength="50" class="form-control" placeholder="Please enter valid email Id">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="txtSignupEmail">Email</label>
+                        <input id="txtSignupEmail" name="email" type="email" class="form-control" placeholder="Please enter valid email Id">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="txtSignupPassword">Password</label>
+                        <input id="txtSignupPassword" name="password" type="password" class="form-control" placeholder="Enter password here..">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="signupPasswordagain">Confirm Password</label>
+                        <input id="signupPasswordagain" name="confirmPassword" placeholder="Reenter The Password Here.." type="password" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Industry Name</label>
+                        <input id="txtIndustryName" type="text" name="industryName" placeholder="Enter Industry name Here.." class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Industry Affiliation</label>
+                        <select id="industryAffl" class="form-control" name="industryAffl">
+                            <option value="none">Select One</option>
+                            {{#each BussinessCategories}}
+                                <option value="{{CategoryId}}">{{CategoryName}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Access Level Requested</label>
+                        <select id="userRole" class="form-control" name="AccessType">
+                            <option value="none">Select One</option>
+                            {{#each SercRoles}}
+                                <option value="{{Id}}">{{RoleName}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button id="signupSubmit" type="submit" class="btn btn-block regFormBtn SercBtn" name="submit">Create your account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" s src="/scripts/Registration/Registration.js"></script>

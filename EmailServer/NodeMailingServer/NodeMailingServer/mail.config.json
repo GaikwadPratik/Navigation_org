@@ -1,0 +1,13 @@
+﻿{
+  "AuthConfig": {
+    "CryptoAlgorithm": "aes-256-ctr",
+    "CryptoPassword": "THISISVERYSTUPIDSECRET",
+    "username": "d0304a0611612a00",
+    "password": "f3234e191f7838039aaaa886d1"
+  },
+  "MailConfig": {
+    "host": "ce32531a09383845caecfbd09500ed5efc",
+    "port": 587,
+    "fromMail": "d0304a0611612a00efe9eadb904be649a7ff5f56"
+  }
+}

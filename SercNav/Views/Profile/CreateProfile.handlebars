@@ -1,0 +1,168 @@
+﻿
+<div class="container">
+    <div class="row bs-wizard" style="border-bottom:0;">
+        <div class="col-xs-2 bs-wizard-step disabled" id="personal_info_step">
+            <div class="text-center bs-wizard-stepnum">Step 1</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Personal Information</div>
+        </div>
+
+        <div class="col-xs-2 bs-wizard-step disabled" id="contact_info_step">            
+            <div class="text-center bs-wizard-stepnum">Step 2</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Contact Information</div>
+        </div>
+
+        <div class="col-xs-2 bs-wizard-step disabled" id="address_info_step">
+            <div class="text-center bs-wizard-stepnum">Step 3</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Residence Information</div>
+        </div>
+
+        <div class="col-xs-2 bs-wizard-step disabled" id="education_info_step">
+            <div class="text-center bs-wizard-stepnum">Step 4</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Education Information</div>
+        </div>
+
+        <div class="col-xs-2 bs-wizard-step disabled" id="occupation_info_step">
+            <!-- active -->
+            <div class="text-center bs-wizard-stepnum">Step 5</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Occupation Information</div>
+        </div>
+
+        <div class="col-xs-2 bs-wizard-step disabled" id="research_info_step">
+            <!-- active -->
+            <div class="text-center bs-wizard-stepnum">Step 6</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Research Project Information</div>
+        </div>
+
+        <div class="col-xs-2 bs-wizard-step disabled" id="professional_society_info_step">
+            <!-- active -->
+            <div class="text-center bs-wizard-stepnum">Step 7</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+            <div class="bs-wizard-info text-center">Professional Society Information</div>
+        </div>
+    </div>
+
+    <div class="container width700">
+        <div class="panel panel-default registerPanel">
+            <br />
+            <div class="">
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+
+                    <label class="col-md-3 control-label">Salutation:</label>
+
+                    <div class="col-md-3 inputGroupContainer">
+                        <!--<input name="emailId" placeholder="" class="form-control" type="text">-->
+                        <label>{{UserDetails.Caption}}</label>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+
+                    <label class="col-md-3 control-label">First Name:</label>
+
+                    <div class="col-md-3 inputGroupContainer">
+                        <!--<input name="emailId" placeholder="" class="form-control" type="text">-->
+                        <label>{{UserDetails.FirstName}}</label>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                    </div>
+
+                    <label class="col-md-3 control-label">Last Name:</label>
+
+                    <div class="col-md-3 inputGroupContainer">
+                        <!--<input name="emailId" placeholder="" class="form-control" type="text">-->
+                        <label>{{UserDetails.LastName}}</label>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+     <div class="profile_steps">
+        <!--Personal Information-->
+        <form id="personal_info" name="PersonalInfo" class="personal_info_form step_1 hide" next="contact_info" prev="" data-load-function="PersonalProfile.LoadInit();">
+            <h3> Personal Information</h3>            
+        </form>
+        <!--Personal Information-->
+        <!--Contact Information-->
+        <form id="contact_info" name="ContactInfo" class="contact_info_form step_2 hide" next="address_info" prev="personal_info" data-load-function="ContactProfile.LoadInit();">
+            <h3> Contact Information </h3>
+            
+        </form>
+        <!--Contact Information-->
+        <!--Address Information-->
+        <form id="address_info" name="AddressInfo" class="step_3 hide formClass" next="education_info" prev="contact_info" data-load-function="AddressProfile.LoadInit();">
+            <h3> Address Information </h3>
+           
+        </form>
+        <!--Address Information-->
+        <!--Education Information-->
+        <!--<div id="education_info" name="EducationInfo" class="education_info_form step_4 hide" next="research_info" prev="address_info" data-load-function="EducationProfile.LoadInit();">
+            <h3> Education Information </h3>
+        </div>-->
+
+        <form id="education_info" name="EducationInfo" class="education_info_form step_4 hide" next="occupation_info" prev="address_info" data-load-function="EducationProfile.LoadInit();">
+            <h3> Education Information </h3>
+        </form>
+        <!--Education Information-->
+
+         <!-- Occupation Information-->
+         <form id="occupation_info" name="OccupationInfo" class="occupation_info_form step_6 hide" next="research_info" prev="education_info" data-load-function="OccupationProfile.LoadInit();">
+             <h3> Occupation Information </h3>
+
+         </form>
+         <!-- Occupation Information-->
+
+        <!--Research Information-->
+        <form id="research_info" name="ResearchInfo" class="education_info_form step_5 hide" next="professional_society_info" prev="occupation_info" data-load-function="ResearchProfile.LoadInit();">
+            <h3> Research Information </h3>            
+        </form>
+        <!--Research Information
+        
+        <!-- Proffessional Society Information-->
+        <form id="professional_society_info" name="SocietyInfo" class="professional_society_info_form step_8 hide" prev="research_info" data-load-function="SocietyProfile.LoadInit();">
+            <h3> Professional Society Information </h3>
+
+        </form>
+        <!-- Proffessional Society Information -->      
+    </div>
+    <div class="button-group">
+        <a href="#" id="backProfileBtn" class="btn btn-info profileBckBtn hide">Back</a>
+        <a href="#" id="nextProfileBtn" class="btn btn-info profileNextBtn pull-right">NEXT</a>
+    </div>
+</div>
+
+<script type="text/javascript" src="/ExternalJavascript/bootstrap-dialog/bootstrap-dialog.js"></script>
+<script type="text/javascript" src="/scripts/Profile/CreateProfile.js"></script>
+<script type="text/javascript" src="/scripts/Profile/ContactProfile.js"></script>
+<script type="text/javascript" src="/scripts/Profile/AddressProfile.js"></script>
+<script type="text/javascript" src="/scripts/Profile/EducationProfile.js"></script>
+<script type="text/javascript" src="/scripts/Profile/SocietyProfile.js"></script>
+<script type="text/javascript" src="/scripts/Profile/PublicationProfile.js"></script>
+<script type="text/javascript" src="/scripts/Profile/OccupationProfile.js"></script>
+<script type="text/javascript" src="/scripts/Profile/ResearchProfile.js"></script>

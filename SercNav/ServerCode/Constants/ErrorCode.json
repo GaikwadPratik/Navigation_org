@@ -1,0 +1,12 @@
+{
+  "EU0000": "Unknown error",
+  "EREG0001": "Username already taken. Please use another.",
+  "EREG0002": "Email already taken. Please use another.",
+  "S0000": "Success",
+  "PU0001": "Error in updating profile",
+  "PU0002": "Error in getting profile details",
+  "AU0001": "Error in updating address",
+  "EH0001": "Error in adding/updating education details",
+  "EH0002": "Error in getting education details",
+  "EC0001": "Error in getting contact types"
+}

@@ -1,0 +1,43 @@
+﻿<div id="divSocieties{{Id}}" class="container">
+    <div class="row">
+        <div class="panel panel-default registerPanel">
+            <div class="panel-body form-group">
+                <!--<div>
+                    <h4>Professional Societies</h4>
+                </div>-->
+
+
+
+                <div class="panel panel-default"  id="divSociety{{Id}}" name="divSociety{{Id}}" data-child-div>
+                    <div class="hide">
+                        <label id="lblSocietyId{{Id}}" name="lblSocietyId{{Id}}" for="txtSocietyId{{Id}}" class="hide"></label>
+                        <input type="text" id="txtSocietyId{{Id}}" name="txtSocietyId{{Id}}" value="" class="hide" />
+                    </div>
+                    <br />
+                    <div class="form-group row firstGroup">
+                        <label class="col-md-6 col-form-label" id="lblSocietyType{{Id}}" name="lblSocietyType{{Id}}" for="ddnSocietyType{{Id}}">Professional Society Name*</label>
+                        <div class="col-md-6 selectContainer">
+                            <!--<div class="input-group">-->
+
+                            <select class="form-control selectpicker ddRequire" id="ddnSocietyType{{Id}}" required>
+                                {{generateOption SocietyType "SocietyTypeId" "SocietyTypeName" SocietyTypeId}}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <!--<label class="col-md-6 control-label"></label>-->
+                        <div class="margin776">
+                            <button type="button" class="btn btn-default btn-add" id="btnAddSociety{{Id}}" data-click-Function="SocietyProfile.LoadInit();">
+                                <span class="glyphicon  glyphicon-plus color999"  aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-default btn-remove" id="btnRemoveSociety{{Id}}" data-click-Function="SocietyProfile.RemoveSocietyDiv({{Id}});">
+                                <span class="glyphicon glyphicon-minus color999" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

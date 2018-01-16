@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>SercNav</Name>
+    <RootNamespace>SercNav</RootNamespace>
+    <NodeExeArguments>server.js</NodeExeArguments>
+    <ScriptArguments>
+    </ScriptArguments>
+    <LaunchUrl>
+    </LaunchUrl>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>44b1e1bd-1b32-4015-9230-f4a626304b8a</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.ts</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptTarget>ES6</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir>
+    </TypeScriptOutDir>
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Client\Images\applicationImages\about.jpg" />
+    <Content Include="Client\Images\applicationImages\A_SERC_logo-300x111.jpg" />
+    <Content Include="Client\Images\applicationImages\EngineName.JPG" />
+    <Content Include="Client\Images\applicationImages\GreenLeft.jpg" />
+    <Content Include="Client\Images\applicationImages\GreenRight.jpg" />
+    <Content Include="Client\Images\applicationImages\logIn.png" />
+    <Content Include="Client\Images\applicationImages\New Bitmap Image.bmp" />
+    <Content Include="Client\Images\applicationImages\sercLogin.jpg" />
+    <Content Include="Client\Images\applicationImages\SERC_Logo_horizontal.jpg" />
+    <Content Include="Client\Images\applicationImages\SERC_Logo_horizontal_1.jpg" />
+    <Content Include="Client\Images\applicationImages\SERC_Logo_stacked.jpg" />
+    <Content Include="Client\Images\applicationImages\SERC_Logo_stacked_1.jpg" />
+    <Content Include="Client\Images\applicationImages\SERC_Nav.jpg" />
+    <Content Include="Client\Images\applicationImages\stevens.jpg" />
+    <Content Include="Client\Images\applicationImages\zoomminus.jpg" />
+    <Content Include="Client\Images\applicationImages\zoomplus.jpg" />
+    <Content Include="Client\Images\jquery-ui\ui-icons_444444_256x240.png" />
+    <Content Include="Client\Images\jquery-ui\ui-icons_555555_256x240.png" />
+    <Content Include="Client\Images\jquery-ui\ui-icons_777620_256x240.png" />
+    <Content Include="Client\Images\jquery-ui\ui-icons_777777_256x240.png" />
+    <Content Include="Client\Images\jquery-ui\ui-icons_cc0000_256x240.png" />
+    <Content Include="Client\Images\jquery-ui\ui-icons_ffffff_256x240.png" />
+    <Content Include="Client\Stylesheets\Application\admin.css" />
+    <Content Include="Client\Stylesheets\Application\common.css" />
+    <Content Include="Client\Stylesheets\Application\custom.css" />
+    <Content Include="Client\Stylesheets\Application\signIn.css" />
+    <Content Include="Client\Stylesheets\Bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Client\Stylesheets\Bootstrap\css\bootstrap.css" />
+    <Content Include="Client\Stylesheets\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Client\Stylesheets\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Client\Stylesheets\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Client\Stylesheets\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Client\Stylesheets\Bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Client\Stylesheets\jquery-ui\jquery-ui.css" />
+    <Content Include="Client\Stylesheets\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="Client\Stylesheets\jquery-ui\jquery-ui.theme.css" />
+    <Content Include="ServerCode\Constants\ErrorCode.json" />
+    <Content Include="ServerCode\EmailTemplates\AdminNewUser.json" />
+    <Content Include="ServerCode\EmailTemplates\NewUserInformation.json" />
+    <Content Include="ServerCode\EmailTemplates\RegistrationApprovedUser.json" />
+    <Content Include="Views\Error\error.handlebars" />
+    <Content Include="Views\Partials\AdminPanel\AccountProfileDetails.handlebars" />
+    <Content Include="Views\Partials\AdminPanel\AccountProfile.handlebars" />
+    <Content Include="Views\Partials\AdminPanel\accountReg.handlebars" />
+    <Content Include="Views\Partials\AdminPanel\AdminPanelHeader.handlebars" />
+    <Content Include="Views\Layout\header.html" />
+    <Content Include="tsconfig.json" />
+    <Content Include="Views\AdminPanel\accountControl.handlebars" />
+    <Content Include="Views\Layout\layout.handlebars" />
+    <Content Include="Views\Partials\AdminPanel\AccountRegDetails.Handlebars">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Partials\Profile\Address.handlebars">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Partials\Profile\Contact.handlebars" />
+    <Content Include="Views\Partials\Profile\Education.handlebars" />
+    <Content Include="Views\Partials\Profile\Occupation.handlebars" />
+    <Content Include="Views\Partials\Profile\Personal.handlebars" />
+    <Content Include="Views\Partials\Profile\Publication.handlebars" />
+    <Content Include="Views\Partials\Profile\Research.handlebars" />
+    <Content Include="Views\Partials\Profile\Society.handlebars" />
+    <Content Include="Views\Profile\CreateProfile.handlebars" />
+    <Content Include="Views\Profile\UserDashboard.handlebars" />
+    <Content Include="Views\Registration\registration.handlebars" />
+    <Content Include="Views\Registration\signIn.handlebars" />
+    <TypeScriptCompile Include="app.ts" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <TypeScriptCompile Include="Entity\IndustryAffiliation\Index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Entity\IndustryAffiliation\IndustryAffiliation.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Entity\IndustryAffiliation\IndustryCategory.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Entity\Profile\BusinessEntity\BusinessEntity.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Address\Address.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Entity\Profile\Address\AddressType.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Entity\Profile\Address\City.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Entity\Profile\Address\Country.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Entity\Profile\Address\Index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Entity\Profile\Address\State.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Entity\Admin\AdminData.ts" />
+    <TypeScriptCompile Include="Entity\DatabaseConfiguration\DatabaseConfiguration.ts" />
+    <TypeScriptCompile Include="Entity\Person\Person.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Contact\Contacts.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Contact\ContactType.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Contact\Index.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Education\Education.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Occupation\Assignment.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Occupation\Index.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Publication\Index.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Research\Index.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Research\ResearchCategory.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Research\ResearchProgram.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Research\ResearchProject.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Research\ResearchRole.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Research\ResearchTask.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Society\Index.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Society\Societies.ts" />
+    <TypeScriptCompile Include="Entity\Profile\Society\Society_type.ts" />
+    <TypeScriptCompile Include="Entity\UserCredential\UserCredential.ts" />
+    <TypeScriptCompile Include="server.ts" />
+    <TypeScriptCompile Include="ServerCode\ApplicationLog\ApplicationLog.ts" />
+    <TypeScriptCompile Include="ServerCode\Config\Database\DatabaseConfig.ts" />
+    <TypeScriptCompile Include="ServerCode\Config\Passport\PassportConfig.ts" />
+    <TypeScriptCompile Include="ServerCode\Database\DatabaseConnector.ts" />
+    <TypeScriptCompile Include="ServerCode\Model\AdminPanel\AccountControlModel.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ServerCode\Model\AdminPanel\AccountRegistrationModel.ts" />
+    <TypeScriptCompile Include="ServerCode\Model\Common\CommonModel.ts" />
+    <TypeScriptCompile Include="ServerCode\Model\Login\LoginModel.ts" />
+    <TypeScriptCompile Include="ServerCode\Model\Mailer\MailerModel.ts" />
+    <TypeScriptCompile Include="ServerCode\Model\Profile\Address\AddressModel.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ServerCode\Model\Profile\Contact\ContactsModel.ts" />
+    <TypeScriptCompile Include="ServerCode\Model\Profile\Education\EducationModel.ts" />
+    <TypeScriptCompile Include="ServerCode\Model\Profile\Personal\PersonalModel.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ServerCode\Model\Profile\Publication\PublicationModel.ts" />
+    <TypeScriptCompile Include="ServerCode\Model\Profile\Research\ResearchModel.ts" />
+    <TypeScriptCompile Include="ServerCode\Model\Profile\Society\SocietyModel.ts" />
+    <TypeScriptCompile Include="ServerCode\Model\Registration\RegistrationModel.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\BaseRoute\BaseRoute.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\AdminRoute\AdminRoute.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\CommonRoute\CommonRoute.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ServerCode\Routes\LoginRoute\LoginRoute.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\ProfileRoute\AddressRoute.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ServerCode\Routes\ProfileRoute\ContactRoute.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ServerCode\Routes\ProfileRoute\EducationRoute.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\ProfileRoute\OccupationRoute.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\ProfileRoute\ProfileRoute.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\ProfileRoute\PublicationRoute.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\ProfileRoute\ResearchRoute.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\ProfileRoute\SocietyRoute.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\RegistrationRoute\RegistrationRoute.ts" />
+    <TypeScriptCompile Include="ServerCode\Routes\Routes.ts" />
+    <TypeScriptCompile Include="ServerCode\ServerUtility\ServerUtility.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="Client\" />
+    <Folder Include="Client\Images\" />
+    <Folder Include="Client\Images\applicationImages\" />
+    <Folder Include="Client\Images\jquery-ui\" />
+    <Folder Include="Client\Scripts\" />
+    <Folder Include="Client\Scripts\AdminPanel\" />
+    <Folder Include="Client\Scripts\External\" />
+    <Folder Include="Client\Scripts\External\Bootstrap\" />
+    <Folder Include="Client\Scripts\External\jquery-core\" />
+    <Folder Include="Client\Scripts\External\jquery-ui\" />
+    <Folder Include="Client\Scripts\External\HandleBars\" />
+    <Folder Include="client\scripts\Profile\" />
+    <Folder Include="Client\Scripts\Utility\" />
+    <Folder Include="Client\Scripts\Registration\" />
+    <Folder Include="Client\Stylesheets\" />
+    <Folder Include="Client\Stylesheets\Application\" />
+    <Folder Include="Client\Stylesheets\Bootstrap\" />
+    <Folder Include="Client\Stylesheets\Bootstrap\css\" />
+    <Folder Include="Client\Stylesheets\Bootstrap\fonts\" />
+    <Folder Include="Client\Stylesheets\jquery-ui\" />
+    <Folder Include="Entity\" />
+    <Folder Include="Entity\Admin\" />
+    <Folder Include="Entity\DatabaseConfiguration\" />
+    <Folder Include="Entity\IndustryAffiliation\" />
+    <Folder Include="Entity\Profile\Address\" />
+    <Folder Include="Entity\Profile\" />
+    <Folder Include="Entity\Profile\Contact\" />
+    <Folder Include="Entity\Profile\Education\" />
+    <Folder Include="Entity\Profile\BusinessEntity\" />
+    <Folder Include="Entity\Profile\Occupation\" />
+    <Folder Include="Entity\Profile\Publication\" />
+    <Folder Include="Entity\Profile\Research\" />
+    <Folder Include="Entity\Profile\Society\" />
+    <Folder Include="Entity\UserCredential\" />
+    <Folder Include="Entity\Person\" />
+    <Folder Include="ServerCode\Config\Database\" />
+    <Folder Include="ServerCode\Config\Passport\" />
+    <Folder Include="ServerCode\Model\" />
+    <Folder Include="ServerCode\Model\Common\" />
+    <Folder Include="ServerCode\Model\AdminPanel\" />
+    <Folder Include="ServerCode\Model\Mailer\" />
+    <Folder Include="ServerCode\Model\Login\" />
+    <Folder Include="ServerCode\Model\Profile\" />
+    <Folder Include="ServerCode\Model\Profile\Address\" />
+    <Folder Include="ServerCode\Model\Profile\Contact\" />
+    <Folder Include="ServerCode\Model\Profile\Education\" />
+    <Folder Include="ServerCode\Model\Profile\Occupation\" />
+    <Folder Include="ServerCode\Model\Profile\Publication\" />
+    <Folder Include="ServerCode\Model\Profile\Personal\" />
+    <Folder Include="ServerCode\Model\Profile\Research\" />
+    <Folder Include="ServerCode\Model\Profile\Society\" />
+    <Folder Include="ServerCode\Model\Registration\" />
+    <Folder Include="ServerCode\" />
+    <Folder Include="ServerCode\ApplicationLog\" />
+    <Folder Include="ServerCode\Database\" />
+    <Folder Include="ServerCode\Config\" />
+    <Folder Include="ServerCode\EmailTemplates\" />
+    <Folder Include="ServerCode\Constants\" />
+    <Folder Include="ServerCode\Routes\CommonRoute\" />
+    <Folder Include="ServerCode\Routes\ProfileRoute\" />
+    <Folder Include="ServerCode\ServerUtility\" />
+    <Folder Include="ServerCode\Routes\" />
+    <Folder Include="ServerCode\Routes\BaseRoute\" />
+    <Folder Include="ServerCode\Routes\AdminRoute\" />
+    <Folder Include="ServerCode\Routes\LoginRoute\" />
+    <Folder Include="ServerCode\Routes\RegistrationRoute\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\AdminPanel\" />
+    <Folder Include="Views\Layout\" />
+    <Folder Include="Views\Error\" />
+    <Folder Include="Views\Partials\" />
+    <Folder Include="Views\Partials\AdminPanel\" />
+    <Folder Include="Views\Partials\Profile\" />
+    <Folder Include="Views\Profile\" />
+    <Folder Include="Views\Registration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\Scripts\AdminPanel\AdminPanel.js" />
+    <Compile Include="Client\Scripts\External\Bootstrap\bootstrap.js" />
+    <Compile Include="Client\Scripts\External\HandleBars\handlebars-v4.0.5.js" />
+    <Compile Include="Client\Scripts\External\jquery-core\additional-methods.min.js" />
+    <Compile Include="Client\Scripts\External\jquery-core\jquery.js" />
+    <Compile Include="Client\Scripts\External\jquery-core\jquery.validate.js" />
+    <Compile Include="Client\Scripts\External\jquery-ui\jquery-ui.js" />
+    <Compile Include="client\scripts\Profile\AddressProfile.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\scripts\Profile\ContactProfile.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client\scripts\Profile\CreateProfile.js" />
+    <Compile Include="Client\Scripts\Profile\EducationProfile.js" />
+    <Compile Include="client\scripts\Profile\OccupationProfile.js" />
+    <Compile Include="Client\Scripts\Profile\PublicationProfile.js" />
+    <Compile Include="client\scripts\Profile\ResearchProfile.js" />
+    <Compile Include="client\scripts\Profile\SocietyProfile.js" />
+    <Compile Include="client\scripts\Registration\Registration.js" />
+    <Compile Include="Client\Scripts\External\jquery-core\jquery.validate.min.js" />
+    <Compile Include="Client\Scripts\Registration\Registration.js" />
+    <Compile Include="Client\Scripts\Registration\SignIn.js" />
+    <Compile Include="Client\Scripts\Utility\Utility.js" />
+    <Compile Include="Gruntfile.js" />
+    <Compile Include="ServerCode\Model\Profile\Occupation\OccupationModel.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

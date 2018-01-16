@@ -1,0 +1,95 @@
+﻿    <div id="divAddresses{{Id}}" class="container">
+        <div class="row">
+            <div class="panel panel-default registerPanel">
+                <div class="panel-body formgroup">
+                    <div id="divAddress{{Id}}" name="divAddress{{Id}}" class="panel panel-default" data-child-div>
+                        <div class="hide">
+                            <label id="lblAddressId{{Id}}" name="lblAddressId{{Id}}" for="txtAddressId{{Id}}" class="hide"></label>
+                            <input type="text" id="txtAddressId{{Id}}" name="txtAddressId{{Id}}" value="{{AddressId}}" class="hide" />
+                        </div>
+                        <div class="form-group row firstGroup">
+                            <label id="lblAddressType{{Id}}" name="lblAddressType{{Id}}" for="ddnAddressType{{Id}}" class="col-md-6 col-form-label">AddressType*</label>
+                            <div class="col-md-6 selectContainer">
+                                <select class="addressType form-control selectpicker ddRequire" id="ddnAddressType{{Id}}" name="ddnAddressType{{Id}}">
+                                    {{generateOption AddressTypes "AddressTypeId" "AddressTypeName" AddressTypeId}}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="lblAddressFirstLine{{Id}}" name="lblAddressFirstLine{{Id}}" for="txtAddressFirstLine{{Id}}" class="col-md-6 control-label">Address Line 1*: </label>
+                            <div class="col-md-6 inputGroupContainer">
+                                <input type="text" class="requireValidate form-control" id="txtAddressFirstLine{{Id}}" name="txtAddressFirstLine{{Id}}" value="{{AddressLine1}}" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="lblAddressSecondLine{{Id}}" name="lblAddressSecondLine{{Id}}" for="txtAddressSecondLine{{Id}}" class="col-md-6 control-label">Address Line 2: </label>
+                            <div class="col-md-6 inputGroupContainer">
+                                <input type="text" class="form-control" id="txtAddressSecondLine{{Id}}" name="txtAddressSecondLine{{Id}}" value="{{AddressLine2}}"  />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="lblAddressCountry{{Id}}" name="lblAddressCountry{{Id}}" for="ddnAddressCountry{{Id}}" class="col-md-6 col-form-label">Country*: </label>
+                            <div class="col-md-6 selectContainer">
+
+                                <select class="form-control selectpicker ddRequire" id="ddnAddressCountry{{Id}}" name="ddnAddressCountry{{Id}}">
+
+                                    {{generateOption Countries "CountryId" "CountryName" CountryId}}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="lblAddressState{{Id}}" name="lblAddressState{{Id}}" for="ddnAddressState{{Id}}" class="col-md-6 col-form-label">State*: </label>
+                            <div class="col-md-6 selectContainer">
+                                <select class="form-control selectpicker" id="ddnAddressState{{Id}}" name="ddnAddressState{{Id}}" onchange="new Utility().GetCities(this,'ddnAddressCity{{Id}}');" disabled ></select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="lblAddressCity{{Id}}" name="lblAddressCity{{Id}}" for="ddnAddressCity{{Id}}" class="col-md-6 col-form-label">City*: </label>
+                            <div class="col-md-6 selectContainer">
+                                <select class="form-control selectpicker" id="ddnAddressCity{{Id}}" name="ddnAddressCity{{Id}}" disabled ></select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="lblZip{{Id}}" name="lblZip{{Id}}" for="txtZip{{Id}}" class="col-md-6 control-label">Zip*: </label>
+                            <div class="col-md-6 inputGroupContainer">
+                                <input type="text" class="zipCity form-control" id="txtZip{{Id}}" name="txtZip{{Id}}" value="{{Zip}}" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label id="lblAddressFromDate{{Id}}" name="lblAddressFromDate{{Id}}" for="txtAddressFromDate{{Id}}" class="col-md-6 control-label">From date*:</label>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input class="requireValidate text-input form-control datetimepickerFromDate" type="text" name="txtAddressFromDate{{Id}}" id="txtAddressFromDate{{Id}}" maxlength="10" value="{{FromDate}}" />
+                                        <span class="input-group-addon open-datetimepickerFromDate"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label name="lblAddressToDate{{Id}}" id="lblAddressToDate{{Id}}" for="txtAddressToDate{{Id}}" class="col-md-6 control-label">To date*:</label>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input class="requireValidate text-input form-control datetimepickerToDate" type="text" name="txtAddressToDate{{Id}}" id="txtAddressToDate{{Id}}" maxlength="10" value="{{ToDate}}" />
+                                        <span class="input-group-addon open-datetimepickerToDate"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <!--<label class="col-md-6 control-label"></label>-->
+                            <div class="addRemoveButtonDiv">
+                                <button type="button" class="btn btn-default btn-add" id="btnAddAddress{{Id}}" data-click-Function="AddressProfile.LoadAddressDiv();">
+                                    <span class="glyphicon  glyphicon-plus color999" aria-hidden="true"></span>
+                                </button>
+                                <button type="button" class="btn btn-default btn-remove" id="btnRemoveAddress{{Id}}" data-click-Function="AddressProfile.RemoveAddressDiv({{Id}});">
+                                    <span class="glyphicon glyphicon-minus color999" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

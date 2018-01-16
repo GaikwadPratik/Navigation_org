@@ -1,0 +1,113 @@
+﻿<div id="divPublications" class="container">
+    <div class="row">
+        <div class="panel panel-default registerPanel">
+            <div class="panel-body form-group">
+                <!--<div>
+                    <h4>Publications</h4>
+                </div>-->
+                <div class="panel panel-default" id="divPublication" name="divPublication" data-child-div>
+
+                    <div class="hide">
+                        <label id="lblPublicationId" name="lblPublicationId" for="txtPublicationId" class="hide"></label>
+                        <input type="text" id="txtPublicationId" name="txtPublicationId" value="" class="hide" />
+                    </div>
+                    <br />
+
+                    <div class="form-group row firstGroup">
+
+                        <label class="col-md-6 control-label" id="lblPublicationTitle" name="lblPublicationTitle" for="txtPublicationTitle">Publication Title*</label>
+
+                        <div class="col-md-6 inputGroupContainer">
+
+                            <input name="txtPublicationTitle" id="txtPublicationTitle" placeholder="" class="form-control" type="text">
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label class="col-md-6 control-label" id="lblPublicationSubject" name="lblPublicationSubject" for="txtPublicationSubject">Publication Subject*</label>
+
+                        <div class="col-md-6 inputGroupContainer">
+
+                            <input name="txtPublicationSubject" id="txtPublicationSubject" placeholder="" class="form-control" type="text">
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <div class="form-group row">
+
+                        <label class="col-md-6 control-label" id="lblPublicationAffiliated" name="lblPublicationAffiliated" for="txtPublicationAffiliated">Publication Affiliated*</label>
+
+                        <div class="col-md-6 inputGroupContainer">
+                            <!--<div class="input-group">-->
+                            <!--<span class="input-group-addon"></span>-->
+                            <input placeholder="" class="form-control" type="text" id="txtPublicationAffiliated" name="txtPublicationAffiliated">
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label class="col-md-6 control-label">Research Task Number*</label>
+
+                        <div class="col-md-6 inputGroupContainer">
+                            <!--<div class="input-group">-->
+                            <!--<span class="input-group-addon"></span>-->
+                            <input name="" placeholder="" class="form-control" type="text">
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+
+                    <label class="col-md-6 control-label" id="lblPublicationKeyword" name="lblPublicationKeyword" for="txtPublicationKeyword">Publication Keyword*</label>
+
+                    <div class="col-md-6 inputGroupContainer">
+                        <!--<div class="input-group">-->
+                        <!--<span class="input-group-addon"></span>-->
+                        <input name="txtPublicationKeyword" id="txtPublicationKeyword" placeholder="" class="form-control" type="text">
+                        <!--</div>-->
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <!--<label class="col-md-6 control-label"></label>-->
+                    <div class="margin776">
+                        <button type="button" class="btn btn-default btn-add" id="btnAddPublication" data-click-Function="SocietyProfile.LoadInit();">
+                            <span class="glyphicon  glyphicon-plus color999" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default btn-remove" id="btnRemovePublication" data-click-Function="SocietyProfile.RemoveSocietyDiv();">
+                            <span class="glyphicon glyphicon-minus color999" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <label class="col-md-6 col-form-label" id="lblRole" name="lblRole" for="ddnRole">Role</label>
+                <div class="col-md-6 selectContainer">
+                    <!--<div class="input-group">-->
+
+                    <select class="form-control selectpicker" id="ddnRole">
+                                           </select>
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <!--<label class="col-md-6 control-label"></label>-->
+                <div class="margin776">
+                    <button type="button" class="btn btn-default btn-add" id="btnAddRole" data-click-Function="SocietyProfile.LoadInit();">
+                        <span class="glyphicon  glyphicon-plus color999" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-remove" id="btnRemoveRole" data-click-Function="SocietyProfile.RemoveSocietyDiv();">
+                        <span class="glyphicon glyphicon-minus color999" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    </div>
+</div>

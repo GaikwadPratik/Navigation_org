@@ -1,0 +1,103 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="panel panel-default registerPanel">
+            <div class="panel-body form-group">
+                <div id="divPersonalHeading">
+                    <h4>Enter Personal Information</h4>
+                </div>
+                <!--<div class="hidden" id="divPersonalReadonly" data-child-div="divPersonalInformation">
+                    Personal Information
+                </div>-->
+
+                <div class="panel panel-default" id="divPersonalInformation" name="PersonalInformation" data-child-div>
+                    <div class="hidden">
+                        <label id="lblhdnAddressType" class="hidden" name="lblhdnAddressType" for="hdnAddressType"></label>
+                        <input type="text" value="{{AddressType}}" class="hidden" id="hdnAddressType" name="hdnAddressType" />
+                        <label id="lblhdnAddressId" class="hidden" name="lblhdnAddressId" for="hdnAddressId"></label>
+                        <input type="text" value="{{BirthAddress.AddressId}}" class="hidden" id="hdnAddressId" name="hdnAddressId" />
+                    </div>
+                    <br />
+                    <div class="form-group row firstGroup">
+            <label class="col-md-6 col-form-label" id="lblProfileSalutation" name="lblProfileSalutation" for="ddnProfileSalutation">Salutation*</label>
+                        <div class="col-md-6 selectContainer">
+                            <select class="form-control selectpicker ddRequire" id="ddnProfileSalutation" name="ddnProfileSalutation">
+                                <option value="">Please select</option>
+                                <option value="Mr.">Mr.</option>
+                                <option value="Mrs.">Mrs.</option>
+                                <option value="Ms.">Ms.</option>
+                            </select>
+                        </div>
+                    </div>
+
+                     <div class="form-group row">
+                        <label class="col-md-6 control-label" id="lblProfileFirstName" name="lblProfileFirstName" for="txtProfileFirstName">First Name*</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <input name="txtProfileFirstName" id="txtProfileFirstName" placeholder="" class="form-control  requireValidate" type="text" value="{{UserData.FirstName}}"  >
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6 control-label" id="lblProfileMiddleName" name="lblProfileMiddleName" for="txtProfileMiddleName">Middle Name</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <input name="txtProfileMiddleName" id="txtProfileMiddleName" placeholder="" class="form-control" type="text" value="{{UserData.MiddleName}}">
+                        </div>
+                    </div>
+
+                     <div class="form-group row">
+                        <label class="col-md-6 control-label" id="lblProfileLastName" name="lblProfileLastName" for="txtProfileLastName" pattern="[a-zA-Z ]+" required title="Insert only letters of the alphabet">Last Name*</label>
+                        <div class="col-md-6 inputGroupContainer">
+                            <input name="txtProfileLastName" id="txtProfileLastName" placeholder="" class="form-control requireValidate" type="text" value="{{UserData.LastName}}">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label" id="lblProfileSercResearch" name="lblProfileSercResearch" for="ddnProfileSercResearch">Are you SERC Researcher?</label>
+                        <div class="col-md-6 selectContainer">
+                            <select class="form-control selectpicker" id="ddnProfileSercResearch" name="ddnProfileSercResearch">
+                                 <option value="none">Please select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label" id="lblProfileDateofBirth" name="lblProfileDateofBirth" for="txtProfileDateofBirth" required>Date of Birth*</label>
+                        <div class='col-md-6'>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input class="text-input form-control requireValidate datetimepicker" type="text" name="txtProfileDateofBirth" id="txtProfileDateofBirth" maxlength="10" value="{{UserData.DateofBirth}}" required/>
+                                    <span class="input-group-addon open-datetimepicker"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label" id="lblProfileBirthCountry" name="lblProfileBirthCountry" for="ddnProfileBirthCountry">Place of Birth Country</label>
+                        <div class="col-md-6 selectContainer">
+                            <select class="form-control selectpicker" id="ddnProfileBirthCountry" name="ddnProfileBirthCountry" onchange="new Utility().GetStates(this,'ddnProfileBirthState');">
+                                {{generateOption Countries "CountryId" "CountryName" BirthAddress.Country.CountryId}}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label" id="lblProfileBirthState" name="lblProfileBirthState" for="ddnProfileBirthState">Place of Birth State</label>
+                        <div class="col-md-6 selectContainer">
+                            <select class="form-control selectpicker" id="ddnProfileBirthState" name="ddnProfileBirthState" onchange="new Utility().GetCities(this,'ddnProfileBirthCity');" disabled></select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label" id="lblProfileBirthCity" name="lblProfileBirthCity" for="ddnProfileBirthCity">Place of Birth City</label>
+                        <div class="col-md-6 selectContainer">
+                            <select class="form-control selectpicker" id="ddnProfileBirthCity" name="ddnProfileBirthCity" disabled></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

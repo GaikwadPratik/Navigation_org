@@ -1,0 +1,30 @@
+﻿<link href="/Stylesheets/Application/admin.css" rel="stylesheet" />
+
+<div class="borderClass">
+    <h3 class="heading headingAdmin">ADMINISTRATIVE PANEL</h3>
+    <ul class="nav nav-tabs adminCustomTabs" data-tabs="tabs">
+        <li role="presentation" class="active"><a href="#Reg" data-toggle="tab">ACCOUNT REGISTRATION</a></li>
+        <li role="presentation"><a id="aAccountControl" href="#Control" data-toggle="tab" onclick="adminPanel.getProfiles();">ACCOUNT CONTROL</a></li>
+        <li role="presentation"><a href="#pers" data-toggle="tab">MANAGE PERSPECTIVE</a></li>
+        <li role="presentation"><a href="#manage" data-toggle="tab">MANAGE PRIVILEGES</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="Reg">
+            {{>AdminPanel/accountReg}}
+
+        </div>
+        <div class="tab-pane" id="Control">
+
+        </div>
+        <div class="tab-pane" id="pers">
+            <p>MANAGE PERSPECTIVE</p>
+
+        </div>
+        <div class="tab-pane" id="manage">
+            <p>MANAGE PRIVILEGES</p>
+
+        </div>
+
+
+    </div>
+</div>

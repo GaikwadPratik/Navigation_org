@@ -1,0 +1,216 @@
+﻿<div id="divProfileDetails">
+    <b>Personal Details</b>
+    <table id="tblPersonalDetails" class="table table-striped" style="margin-left:auto;margin-right:auto;text-align:left;">
+        <tbody>
+            <tr>
+                <td>Salutation</td>
+                <td>{{PersonalDetails.Person.FirstName}}</td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td>{{PersonalDetails.Person.FirstName}}</td>
+            </tr>
+            {{#if PersonalDetails.Person.MiddleName}}
+            <tr>
+                <td>Middle Name:</td>
+                <td>{{PersonalDetails.Person.MiddleName}}</td>
+            </tr>
+            {{/if}}
+            <tr>
+                <td>Last Name:</td>
+                <td>{{PersonalDetails.Person.LastName}}</td>
+            </tr>
+            <tr>
+                <td>Is SERC researcher?</td>
+                <td>{{#if PersonalDetails.Person.IsSercResearcher}} Yes {{else}} No {{/if}}</td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td>{{PersonalDetails.Person.DateofBirth}}</td>
+            </tr>
+            <tr>
+                <td>Birth Country:</td>
+                <td>{{PersonalDetails.Address.Country.CountryName}}</td>
+            </tr>
+            <tr>
+                <td>Birth State:</td>
+                <td>{{PersonalDetails.Address.State.StateName}}</td>
+            </tr>
+            <tr>
+                <td>Birth City:</td>
+                <td>{{PersonalDetails.Address.City.CityName}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <b>Contact Details</b>
+    <table id="tblContactDetails" class="table table-striped" style="margin-left:auto;margin-right:auto;text-align:left;">
+        <tbody>
+            {{#each ContactDetails.contacts}}
+            <tr>
+                <td>Contact Type</td>
+                <td>{{ContactType.ContactTypeName}}</td>
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td>{{ContactValue}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <b>Address Details</b>
+    <table id="tblAddressDetails" class="table table-striped" style="margin-left:auto;margin-right:auto;text-align:left;">
+        <tbody>
+            {{#each AddressDetails.addresses}}
+            <tr>
+                <td>Address Type:</td>
+                <td>{{AddressType.AddressTypeName}}</td>
+            </tr>
+            <tr>
+                <td>Address Line 1:</td>
+                <td>{{AddressLine1}}</td>
+            </tr>
+            <tr>
+                <td>Address Line 2:</td>
+                <td>{{AddressLine2}}</td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td>{{Country.CountryName}}</td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>{{State.StateName}}</td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td>{{City.CityName}}</td>
+            </tr>
+            <tr>
+                <td>Zip:</td>
+                <td>{{Zip}}</td>
+            </tr>
+            <tr>
+                <td>Is this preferred mailing address?</td>
+                <td>{{#if PreferredMailingAddress}} Yes {{else}} No {{/if}}</td>
+            </tr>
+            <tr>
+                <td>From Date:</td>
+                <td>{{FromDate}}</td>
+            </tr>
+            {{#if ToDate}}
+            <tr>
+                <td>To Date</td>
+                <td>{{ToDate}}</td>
+            </tr>
+            {{/if}}
+            {{/each}}
+        </tbody>
+    </table>
+    <b>Education Details</b>
+    <table id="tblEducationDetails" class="table table-striped" style="margin-left:auto;margin-right:auto;text-align:left;">
+        <tbody>
+            {{#each EducationDetails.School}}
+            <tr>
+                <td>School Name:</td>
+                <td>{{SchoolName}}</td>
+            </tr>
+            <tr>
+                <td>Degree Year</td>
+                <td>{{DegreeYear}}</td>
+            </tr>
+            {{/each}}
+            <tr></tr>
+            {{#each EducationDetails.College}}
+            <tr>
+                <td>Degree:</td>
+                <td>{{Degree}}</td>
+            </tr>
+            <tr>
+                <td>School Name:</td>
+                <td>{{SchoolName}}</td>
+            </tr>
+            <tr>
+                <td>Degree Year</td>
+                <td>{{DegreeYear}}</td>
+            </tr>
+            {{/each}}
+            
+        </tbody>
+    </table>
+    <b>Occupation Details</b>
+    <table id="tblOccupationDetails" class="table table-striped">
+        <tbody>
+            {{#each OccupationDetails}}            
+            <tr>
+                <td>Organization Name</td>
+                <td>{{Entity.entityName}}</td>
+            </tr>
+            <tr>
+                <td>Role</td>
+                <td>{{Role}}</td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td>{{Title}}</td>
+            </tr>
+            <tr>
+                <td>Start Date</td>
+                <td>{{StartDate}}</td>
+            </tr>
+            <tr>
+                <td>End Date</td>
+                <td>{{EndDate}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <b>Research Details</b>
+    <table id="tblReserachDetails" class="table table-striped">
+        <tbody>
+            {{#each ResearchDetails.researchTasks}}
+            <tr>
+                <td>Research Category:</td>
+                <td>{{ResearchProject.ResearchProgram.ResearchCategory.ResearchCategoryName}}</td>
+            </tr>
+            <tr>
+                <td>Research Program:</td>
+                <td>{{ResearchProject.ResearchProgram.ResearchProgramName}}</td>
+            </tr>
+            <tr>
+                <td>Research Project</td>
+                <td>{{ResearchProject.ResearchProjectName}}</td>
+            </tr>
+            <tr>
+                <td>Research Task</td>
+                <td>{{ResearchTaskNumber}}</td>
+            </tr>
+            <tr>
+                <td>University Affiliation</td>
+                <td>{{BussinessEntity.entityName}}</td>
+            </tr>
+            <tr>
+                <td>User Role</td>
+                <td>{{ResearchRole.ResearchRoleName}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <b>Society Details</b>
+    <table id="tblSocietyDetails" class="table table-striped">
+        <tbody>
+            {{#each SocientyDetails}}
+            <tr>
+                <td>Society Name</td>
+                <td>{{SocietyValue}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <div class="from-group hidden" id="commentDiv">
+        <label for="comment" class="commentForDenyLbl" id="lblCommentForDeny">Reason:</label>
+        <textarea class="commentSection" id="txtComments"></textarea>
+        <button type="button" id="btnCloseIcon" class="close" aria-label="Close">
+            <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>

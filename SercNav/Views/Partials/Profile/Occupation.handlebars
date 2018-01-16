@@ -1,0 +1,207 @@
+﻿<div class="container" id="divOccupations{{Id}}">
+    <div class="row">
+        <div class="panel panel-default registerPanel">
+            <div class="panel-body form-group">
+                <div>
+                    <h4>Occupation History</h4>
+                </div>
+                <div class="panel panel-default"  id="divOccupation{{Id}}" name="divOccupation{{Id}}" data-child-div>
+                    <br />
+                    <div class="hide">
+                        <label id="lblEntityId{{Id}}" name="lblEntityId{{Id}}" for="txtEntityId{{Id}}" class="hide"></label>
+                        <input type="text" id="txtEntityId{{Id}}" name="txtEntityId{{Id}}" value="{{EntityId}}" class="hide" />
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label ddRequire" id="lblIndustryAff{{Id}}" name="lblIndustryAff{{Id}}" for="industryAfflOcc{{Id}}">Industry Affiliation</label>
+                        <div class="col-md-6 selectContainer">
+
+                            <select id="industryAfflOcc{{Id}}" class="form-control" name="industryAfflOcc{{Id}}">
+                                {{generateOption CategoryType "CategoryId" "CategoryName" CategoryId}}
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                
+                    <div class="form-group row">
+
+                        <label class="col-md-6 control-label" id="lblOrganizationName{{Id}}" for="txtOrganizationName{{Id}}" name="lblOrganizationName{{Id}}">Organization Name*</label>
+
+                        <div class="col-md-6 inputGroupContainer">
+                            <!--<div class="input-group">-->
+                            <!--<span class="input-group-addon"></span>-->
+                            <input  placeholder="" class="form-control requireValidate" type="text" id="txtOrganizationName{{Id}}" name="txtOrganizationName{{Id}}" value="{{EntityName}}">
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label" id="lblRole{{Id}}" name="lblRole{{Id}}" for="txtRole{{Id}}">Role*</label>
+                        <div class="col-md-6 selectContainer">
+                           
+                            <input placeholder="" class="form-control requireValidate" type="text" id="txtRole{{Id}}" name="txtRole{{Id}}" value="{{Role}}">
+                       
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label class="col-md-6 control-label" id="lblTitle{{Id}}" for="txtTitle{{Id}}" name="lblTitle{{Id}}">Title*</label>
+
+                        <div class="col-md-6 inputGroupContainer">
+                            <!--<div class="input-group">-->
+                            <!--<span class="input-group-addon"></span>-->
+                            <input  placeholder="" class="form-control requireValidate" type="text" id="txtTitle{{Id}}" name="txtTitle{{Id}}" value="{{Title}}">
+                            <!--</div>-->
+                        </div>
+                    </div>
+                   
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label" id="lblStartDate{{Id}}" name="lblStartDate{{Id}}" for="txtStartDate{{Id}}">Start Date*</label>
+                        <div class='col-md-6'>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input class="text-input form-control requireValidate datetimepickerToDate" type="text" name="txtStartDate{{Id}}" id="txtStartDate{{Id}}" maxlength="10" value="{{StartDate}}"/>
+                                    <span class="input-group-addon open-datetimepickerToDate"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-6 col-form-label" id="lblEndDate{{Id}}" for="txtEndDate{{Id}}" name="lblEndDate{{Id}}">End Date*</label>
+                        <div class='col-md-6'>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input class="text-input form-control requireValidate datetimepickerFromDate" type="text" name="txtEndDate{{Id}}" id="txtEndDate{{Id}}" maxlength="10" value="{{EndDate}}"/>
+                                    <span class="input-group-addon open-datetimepickerFromDate"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label class="col-md-6 control-label" id="lblCurrentlyEmp{{Id}}" for="chkCurrentlyEmp{{Id}}" name="lblCurrentlyEmp{{Id}}">Currently Employed*</label>
+
+                        <div class="col-md-6 inputGroupContainer">
+                            <!--<div class="input-group">-->
+                            <!--<span class="input-group-addon"></span>-->
+                            <input name="chkCurrentlyEmp{{Id}}" id="chkCurrentlyEmp{{Id}}" placeholder="" class="checkbox" type="checkbox">
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+
+                   
+                        <!--<div class="panel panel-default margin10 ">
+                            <div class="form-group row marginTop">
+
+                                <label class="col-md-6 control-label" id="lblOrganizationAdd1" for="txtOrganizationAdd" name="lblOrganizationAdd">Organization Address 1</label>
+
+                                <div class="col-md-6 inputGroupContainer">
+                                    
+                                    <input name="txtOrganizationAdd1" id="txtOrganizationAdd1" placeholder="" class="form-control" type="text">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+
+                                <label class="col-md-6 control-label"id="lblOrganizationAdd2" name="lblOrganizationAdd2" for="txtOrganizationAdd2">Organization Address 2</label>
+
+                                <div class="col-md-6 inputGroupContainer">
+                                   
+                                    <input id="txtOrganizationAdd2" name="txtOrganizationAdd2" placeholder="" class="form-control" type="text">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-6 col-form-label">Organisation Country</label>
+                                <div class="col-md-6 selectContainer" id="lblOrganizationCountry" for="ddnOrganizationCountry" name="lblOrganizationCountry">
+                                    
+
+                                    <select class="form-control selectpicker" id="ddnOrganizationCountry" name="ddnOrganizationCountry">
+                                       
+                                    </select>
+                                 
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-6 col-form-label" id="lblOrganizationState" name="lblOrganizationState" for="ddnOrganizationState">Organisation State</label>
+                                <div class="col-md-6 selectContainer">
+                                 
+
+                                    <select class="form-control selectpicker" id="ddnOrganizationState" name="ddnOrganizationState">
+                                       
+                                    </select>
+                                   
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-6 col-form-label" id="lblOrganizationCity" name="lblOrganizationCity" for="ddnOrganizationCity">Organisation City</label>
+                                <div class="col-md-6 selectContainer">
+                                   
+
+                                    <select class="form-control selectpicker" id="ddnOrganizationCity" name="ddnOrganizationCity">
+                                    </select>
+                                   
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+
+                                <label class="col-md-6 control-label" id="lblOrganizationZip" name="lblOrganizationZip" for="ddnOrganizationZip">Organization Zip</label>
+
+                                <div class="col-md-6 inputGroupContainer" >
+                                  
+                                    <input placeholder="" class="form-control" type="text" id="lblOrganizationZip" name="lblOrganizationZip">
+                                   
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+
+                                <label class="col-md-6 control-label" id="lblOrganizationPrefAddress" name="lblOrganizationPrefAddress" for="chkOrganizationPrefAddress">Preferred Address</label>
+
+                                <div class="col-md-6 inputGroupContainer">
+                                   
+                                    <input name="" placeholder="" class="checkbox" type="checkbox" id="chkOrganizationPrefAddress" dirname="chkOrganizationPrefAddress" >
+                                  
+                                </div>
+                            </div>
+
+
+                        </div>-->
+
+
+                    <!--</div>-->
+                    <div class="form-group row">
+                        <!--<label class="col-md-6 control-label"></label>-->
+                        <div class="addRemoveButtonDiv">
+                            <button type="button" class="btn btn-default btn-add" id="btnAddOccupation{{Id}}" data-click-Function="OccupationProfile.LoadOccupationDiv();">
+                                <span class="glyphicon  glyphicon-plus color999" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-default btn-remove" id="btnRemoveOccupation{{Id}}"data-click-Function="OccupationProfile.RemoveOccupationDiv({{Id}});">
+                                <span class="glyphicon glyphicon-minus color999" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
